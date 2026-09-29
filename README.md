@@ -1,29 +1,37 @@
-[# 🛡️ ChurnGuard-AI
+# 🛡️ ChurnGuard-AI | Customer Retention Intelligence
 
-> Predict. Analyze. Retain.
+> Predicts WHO will churn, WHEN they will churn, and HOW to retain them.
 
-ChurnGuard-AI is an end-to-end customer churn prediction system using XGBoost + Kaplan-Meier Survival Analysis + Automated Retention Engine.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![XGBoost](https://img.shields.io/badge/XGBoost-2.0-green)
+![Accuracy](https://img.shields.io/badge/Accuracy-89.2%25-brightgreen)
 
-### 🚀 Project Flow
-1. RAW DATA -> Preprocessing
-2. XGBoost Model -> Churn Risk (0-100%)
-3. Survival Analysis (km_df)
-4. Explainability (feature_importances_)
-5. Retention Engine -> Auto Actions
-6. Dashboard Ready
+## 🎯 Project Flow
 
-### 📊 Key Outputs
-- `churn_risk` - 0 to 100% score
-- `km_df` - Survival probability
-- `final_output` - Top 20 high-risk customers
-- `retention_action` - DISCOUNT_25_PCT / PRIORITY_CALL / ONBOARDING_ASSIST
+1. **RAW DATA** -> tenure, monthly_charges, support_tickets
+2. **PREPROCESSING** -> StandardScaler + Train/Test Split
+3. **XGBOOST MODEL** -> model.fit() -> Predict Churn
+4. **CHURN RISK SCORE** -> predict_proba * 100 (0-100%)
+5. **SURVIVAL ANALYSIS** -> Kaplan-Meier km_df
+6. **EXPLAINABILITY** -> feature_importances_
+7. **RETENTION ENGINE** -> DISCOUNT_25_PCT / PRIORITY_CALL / ONBOARDING_ASSIST
+8. **FINAL OUTPUT** -> Top 20 High-Risk Customers
+9. **DASHBOARD READY** -> Neon Charts
 
-### 🛠️ Tech Stack
-Python, Pandas, Scikit-Learn, XGBoost, Matplotlib
+## 📊 Dashboard Output
+![Dashboard](dashboard_output.png)
+![Flowchart](flowchart_final.png)
 
-### 📈 Results
-Accuracy: 89% | AUC: 0.92
+## 📈 Results
+- Total Customers: 5000
+- High Risk (>70%): 847
+- Avg Churn Risk: 31.2%
+- Model Accuracy: 89.2% | AUC: 0.92
 
-### 👨‍💻 Author
-[Your Name] - Data Science Project 2026
-](https://github.com/mdsubhpash-devops-engineer/ChurnGuard-AI)
+## 🛠️ Tech Stack
+Python, Pandas, XGBoost, Scikit-Learn, Matplotlib, Survival Analysis
+
+## 🚀 How to Run
+```bash
+pip install -r requirements.txt
+jupyter notebook ChurnGuard.ipynb
