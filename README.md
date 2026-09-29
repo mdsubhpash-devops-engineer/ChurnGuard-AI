@@ -1,4 +1,4 @@
-# 🛡️ ChurnGuard-AI
+[# 🛡️ ChurnGuard-AI
 
 > Predict. Analyze. Retain.
 
@@ -26,3 +26,4 @@ Accuracy: 89% | AUC: 0.92
 
 ### 👨‍💻 Author
 [Your Name] - Data Science Project 2026
+](https://github.com/mdsubhpash-devops-engineer/ChurnGuard-AI)
